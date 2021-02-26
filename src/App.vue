@@ -32,6 +32,12 @@ export default defineComponent({
         multiplier: 10,
         threshold: 5,
       },
+      {
+        id: 3,
+        points: 0,
+        multiplier: 100,
+        threshold: 50,
+      },
     ]);
 
     const total = computed(() =>
