@@ -1,13 +1,15 @@
 <template>
   <div class="p-4 min-h-screen bg-gray-300">
-    <h1 class="text-center mb-4 font-bold text-2xl">Incremental: {{ total }} points</h1>
-    <entry-card
-      v-for="level in data"
-      :key="level.id"
-      @increment="level.points++"
-      :data="level"
-      :total="total"
-    />
+    <div class="max-w-lg mx-auto">
+      <h1 class="text-center mb-4 font-bold text-2xl">Incremental: {{ total }} points</h1>
+      <entry-card
+        v-for="level in data"
+        :key="level.id"
+        @increment="level.points++"
+        :data="level"
+        :total="total"
+      />
+    </div>
   </div>
 </template>
 
