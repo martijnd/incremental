@@ -1,8 +1,13 @@
 <template>
-  <div class="EntryCard">
-    <h2>Level {{data.id}}</h2>
-    {{ data.points }}
-    <button @click="$emit('increment')" :disabled="total < data.threshold">
+  <div class="text-center bg-white shadow EntryCard">
+    <h2 class="">Level {{ data.id }}</h2>
+    <div>+{{ data.multiplier }} points</div>
+    <div>{{ data.points }} points</div>
+    <button
+      class="px-4 py-2 mt-2 border border-gray-300 rounded"
+      @click="$emit('increment')"
+      :disabled="total < data.threshold"
+    >
       Increment
     </button>
   </div>
@@ -34,9 +39,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .EntryCard {
-  background-color: white;
   border-radius: 5px;
-  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   margin-bottom: 1rem;
 }

@@ -1,12 +1,14 @@
 <template>
-  <h1>Incremental: {{ total }}</h1>
-  <entry-card
-    v-for="level in data"
-    :key="level.id"
-    @increment="level.points++"
-    :data="level"
-    :total="total"
-  />
+  <div class="p-4 min-h-screen bg-gray-300">
+    <h1 class="text-center mb-4 font-bold text-2xl">Incremental: {{ total }} points</h1>
+    <entry-card
+      v-for="level in data"
+      :key="level.id"
+      @increment="level.points++"
+      :data="level"
+      :total="total"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -60,11 +62,6 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  padding: 1rem;
-  min-height: 100vh;
-  background-color: #ccc;
 }
 
 body {
