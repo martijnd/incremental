@@ -1,6 +1,6 @@
 <template>
-  <div class="text-center bg-white shadow EntryCard">
-    <h2 class="">Level {{ data.id }}</h2>
+  <div class="text-center p-4 bg-white rounded shadow-lg mb-4 EntryCard">
+    <h2 class="font-semibold text-lg">Level {{ data.id }}</h2>
     <div>+{{ data.multiplier }} points</div>
     <div>{{ data.points }} points</div>
     <button
@@ -38,9 +38,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.EntryCard {
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
+
 </style>
